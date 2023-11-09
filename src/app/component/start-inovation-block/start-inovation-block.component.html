@@ -1,0 +1,47 @@
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         Start Innovation Block
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div id="innovation-block" class="innovation-block innovation-block-two mrb-195">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <div class="section-title text-center">
+          <h4 class="title-sub">Étude de cas</h4><!--  /.title-sub -->
+          <h2 class="title-main">Les deux seules fonctions de l'entreprise sont le marketing et l'innovation</h2><!-- /.title-main -->
+          <div class="divider">
+            <img src="assets/images/icon/divider.png" alt="icon">
+          </div>
+        </div><!-- /.section-title -->
+      </div><!-- /.col-12 -->
+    </div><!-- /.row -->
+  </div><!-- /.container -->
+
+  <div id="innovation-carousel" class="owl-carousel" data-owl-items="4" data-owl-margin="30" data-owl-dots="0" data-owl-loop="1" data-owl-center="1">
+    <div class="item"  *ngFor="let project of projects;">
+      <div class="portfolio-item portfolio-one">
+        <figure class="portfolio-thumb">
+          <img src='assets/images/projects/{{project.img}}' alt="{{project.title}}">
+          <div class="content">
+            <div class="portfolio-title">
+              <h3><a href="portfolio-single.html">{{project.title}}</a></h3>
+            </div>
+            <div class="icon">
+              <a [routerLink]="[project.slug]"><span class="fa fa-long-arrow-right"></span></a>
+            </div>
+          </div><!-- /.content -->
+        </figure><!-- /.portfolio-thumb -->
+      </div><!-- /.portfolio-item -->
+    </div><!-- /.item -->
+
+
+  </div><!-- /#innovation-carousel-two -->
+
+  <div class="btn-links-area text-center">
+    <button class="btn-links btn-prev">
+      <span class="icon-arrows"></span>
+    </button>
+    <button class="btn-links btn-next">
+      <span class="icon-arrows-1"></span>
+    </button>
+  </div><!--~./ end btn links area ~-->
+</div><!-- /.innovation-block -->
