@@ -1,3 +1,4 @@
+#!/bin/bash
 # Specify the Docker container name
 CONTAINER_NAME= "bgs-portfolio"
 PORT_ID= 80
