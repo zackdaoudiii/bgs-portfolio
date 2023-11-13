@@ -1,22 +1,12 @@
 import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {FooterComponent} from './component/layout/footer/footer.component';
-import {LayoutComponent} from './component/layout/layout/layout.component';
 import {HomeComponent} from './pages/home/home.component';
 import {ProjectPageComponent} from './pages/project-page/project-page.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'project/:slug', component: ProjectPageComponent },
+  { path: '', component: HomeComponent , data : { title : 'A global technology and services company committed to innovation| BGS'} },
+  { path: 'project/:slug', component: ProjectPageComponent , data : { title : 'Projects'} },
 
-  // {
-  //   path: '', component : LayoutComponent,
-  //   children:
-  //     [
-  //       { path: 'home', component: HomeComponent },
-  //
-  //     ],
-  // },
   // { path: '**', pathMatch: 'full',component: PagenotfoundComponent },
 
 ];
