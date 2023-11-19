@@ -18,6 +18,7 @@ import { ProjectPageComponent } from './pages/project-page/project-page.componen
 
 
 
+// @ts-ignore
 @NgModule({
   declarations: [
     AppComponent,
