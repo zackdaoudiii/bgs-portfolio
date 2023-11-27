@@ -17,9 +17,7 @@ export class ProjectPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.slug  = this._activateRoute.snapshot.paramMap.get('slug');
-    console.log(this.slug);
     this.project = projects.filter(value => value.id === this.slug)[0];
-    console.log(this.project);
   }
 
 }

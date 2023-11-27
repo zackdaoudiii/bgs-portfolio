@@ -11,7 +11,7 @@
       <div class="col-md-8">
         <div class="page-header-content">
           <div class="page-header-caption">
-            <h2 class="page-title">Notre <span>travaux</span></h2>
+            <h2 class="page-title">Nos <span>travaux</span></h2>
           </div>
         </div><!--~~./ page-header-content ~~-->
       </div>
@@ -21,7 +21,7 @@
         </div><!--~~./ page-header-thumb ~~-->
       </div>
     </div>
-  </div><!--~~./ end container ~~-->
+  </div><!--~~./ end container ~~-->x
 </div><!--~~./ end page title area ~~-->
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -32,13 +32,13 @@
     <!-- Content Row -->
     <div class="row justify-content-between portfolio-sticky">
       <div class="col-lg-6">
-        <figure>
+        <figure *ngIf="project.img1">
             <img src="{{project.img1}}" alt="" />
         </figure>
-        <figure>
+        <figure *ngIf="project.img2">
             <img src="{{project.img2}}" alt="Portfolio Image" />
         </figure>
-        <figure>
+        <figure *ngIf="project.img3">
             <img src="{{project.img3}}" alt="Portfolio Image" />
         </figure>
       </div><!-- /.col-lg-6 -->
@@ -59,17 +59,8 @@
             <div class="meta-item">
               publier <span>{{project.categorie}}</span>
             </div><!-- /.meta-item -->
-<!--            <div class="meta-item">-->
-<!--              share-->
-<!--              <div class="social-status">-->
-<!--                <a href="#"><i class="fa fa-facebook"></i></a>-->
-<!--                <a href="#"><i class="fa fa-twitter"></i></a>-->
-<!--                <a href="#"><i class="fa fa-instagram"></i></a>-->
-<!--                <a href="#"><i class="fa fa-google-plus"></i></a>-->
-<!--              </div>-->
-<!--            </div>&lt;!&ndash; /.meta-item &ndash;&gt;-->
           </div><!-- /.portfolio-meta -->
-          <div class="site-link">
+          <div class="site-link" *ngIf="project.visite_web_site">
             <a class="btn btn-default" href="{{project.visite_web_site}}">Visit Website</a>
           </div><!-- /.site-link -->
         </div><!-- /.portfolio-details -->

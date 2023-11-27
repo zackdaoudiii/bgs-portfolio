@@ -9,11 +9,13 @@ WORKDIR /usr/local/app
 # Add the source code to app
 COPY ./ /usr/local/app/
 
+# Clean cache
+RUN npm cache clean --force
 # Install all the dependencies
 RUN npm install
 
 # Generate the build of the application
-RUN npm run build
+RUN npm run build --prod
 
 # Stage 2: Serve app with nginx server
 
@@ -33,3 +35,4 @@ COPY --from=build /app/dist/bgs-portfolio /usr/share/nginx/html
 
 # Expose port 80
 EXPOSE 80
+## chmod 775 build_deploy.sh
